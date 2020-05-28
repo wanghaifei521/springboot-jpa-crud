@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form action="/updateById" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="id" th:value="${items.id}"><br>
+    <input type="hidden" name="pic" th:value="${items.pic}"><br>
+    姓名：<input type="text" name="name" th:value="${items.name}"><br>
+    价格：<input type="text" name="price" th:value="${items.price}"><br>
+    描述：<input type="text" name="detail" th:value="${items.detail}"><br>
+    图片：<img th:src="${items.pic}" style="height: 60px;width: 60px"><br>
+            <input type="file" name="file"><br>
+    时间：<input type="date" name="createTime" th:field="${items.createTime}"><br>
+    <input type="submit" value="提交">
+</form>
+</body>
+</html>
